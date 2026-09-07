@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bjuvn1awiadps"]
 
 [ext_resource type="PackedScene" uid="uid://g2srgmdylo3v" path="res://Objects/player.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://djq3qnl1buep2" path="res://Scripts/camera_follow.gd" id="1_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://ljndgvdjub6" path="res://Assets/tilemap_packed.png" id="3_wrm1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
@@ -186,6 +187,10 @@ sources/0 = SubResource("TileSetAtlasSource_qxrlw")
 
 [node name="Game" type="Node2D" unique_id=942260215]
 
+[node name="MainCamera" type="Camera2D" parent="." unique_id=1912143337]
+position = Vector2(347, -62)
+script = ExtResource("1_wrm1d")
+
 [node name="BackgroundLayer" type="TileMapLayer" parent="." unique_id=1772843005]
 modulate = Color(0.5609549, 0.5609549, 0.5609549, 1)
 texture_filter = 1
@@ -198,7 +203,6 @@ tile_map_data = PackedByteArray("AAD+/wUAAAAEAAEAAAD9/wgAAAACAAYAAAD9/wkAAAACAAc
 tile_set = SubResource("TileSet_y5fic")
 
 [node name="Player" parent="." unique_id=2093625775 instance=ExtResource("1_ebmjs")]
-position = Vector2(103, 69)
+position = Vector2(125, 57)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1912143337]
-position = Vector2(252, -44)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=861144704]
