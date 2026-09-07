@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://g2srgmdylo3v"]
+
+[ext_resource type="Script" uid="uid://c4mdd3mkeldil" path="res://Scripts/player.gd" id="1_3y5cq"]
+[ext_resource type="Texture2D" uid="uid://dg4jhef3fbjvm" path="res://Assets/tilemap-characters_packed.png" id="2_2i4gt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qxrlw"]
+radius = 8.0
+height = 20.0
+
+[node name="Player" type="CharacterBody2D" unique_id=2093625775]
+script = ExtResource("1_3y5cq")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=200951388]
+texture_filter = 1
+texture = ExtResource("2_2i4gt")
+offset = Vector2(0, -12)
+region_enabled = true
+region_rect = Rect2(0, 0, 24, 24)
+
+[node name="Body" type="CollisionShape2D" parent="." unique_id=1023531103]
+position = Vector2(0, -10)
+shape = SubResource("CapsuleShape2D_qxrlw")
