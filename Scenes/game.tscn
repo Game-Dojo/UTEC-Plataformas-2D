@@ -190,6 +190,7 @@ sources/0 = SubResource("TileSetAtlasSource_qxrlw")
 [node name="MainCamera" type="Camera2D" parent="." unique_id=1912143337]
 position = Vector2(347, -62)
 script = ExtResource("1_wrm1d")
+camera_speed = 2.0
 
 [node name="BackgroundLayer" type="TileMapLayer" parent="." unique_id=1772843005]
 modulate = Color(0.5609549, 0.5609549, 0.5609549, 1)
