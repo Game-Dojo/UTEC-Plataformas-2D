@@ -204,5 +204,3 @@ tile_set = SubResource("TileSet_y5fic")
 
 [node name="Player" parent="." unique_id=2093625775 instance=ExtResource("1_ebmjs")]
 position = Vector2(125, 57)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=861144704]
