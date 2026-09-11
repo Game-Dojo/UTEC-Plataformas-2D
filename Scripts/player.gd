@@ -11,19 +11,22 @@ const JUMP_VELOCITY = -380.0
 var coyote_counter := 0.0
 
 # Gravedad aumentada
-var gravity_scale = 1.0
+var gravity_scale := 1.0
 
 var is_jumping := false
 
 func _physics_process(delta: float) -> void:
+	# Gravedad
 	if not is_on_floor():
 		velocity += get_gravity() * gravity_scale * delta
 		coyote_counter -= delta
 	else:
+		# Cuando toca el pisoooo
 		is_jumping = false
 		coyote_counter = coyote_time
 		gravity_scale = 1.0
 	
+	# Salta
 	if Input.is_action_just_pressed("ui_accept") and coyote_counter > 0.0:
 		velocity.y = JUMP_VELOCITY
 		coyote_counter = 0.0
@@ -38,6 +41,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("ui_accept"):
 		velocity.y *= 0.5
 	
+	# Moviemiento horizontal
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED

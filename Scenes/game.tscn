@@ -204,4 +204,5 @@ tile_map_data = PackedByteArray("AAD+/wUAAAAEAAEAAAD9/wgAAAACAAYAAAD9/wkAAAACAAc
 tile_set = SubResource("TileSet_y5fic")
 
 [node name="Player" parent="." unique_id=2093625775 instance=ExtResource("1_ebmjs")]
-position = Vector2(125, 57)
+position = Vector2(141, 79)
+coyote_time = 0.15
