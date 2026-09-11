@@ -205,4 +205,5 @@ tile_set = SubResource("TileSet_y5fic")
 
 [node name="Player" parent="." unique_id=2093625775 instance=ExtResource("1_ebmjs")]
 position = Vector2(141, 79)
+max_jumps = 2
 coyote_time = 0.15
