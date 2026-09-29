@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://g2srgmdylo3v" path="res://Objects/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://djq3qnl1buep2" path="res://Scripts/camera_follow.gd" id="1_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://ljndgvdjub6" path="res://Assets/tilemap_packed.png" id="3_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://dg4jhef3fbjvm" path="res://Assets/tilemap-characters_packed.png" id="4_3dryh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("3_wrm1d")
@@ -204,6 +205,28 @@ tile_map_data = PackedByteArray("AAD+/wUAAAAEAAEAAAD9/wgAAAACAAYAAAD9/wkAAAACAAc
 tile_set = SubResource("TileSet_y5fic")
 
 [node name="Player" parent="." unique_id=2093625775 instance=ExtResource("1_ebmjs")]
-position = Vector2(141, 79)
+position = Vector2(110, 87)
 max_jumps = 2
 coyote_time = 0.15
+
+[node name="Coin" type="Node2D" parent="." unique_id=794046069]
+position = Vector2(225, 9)
+
+[node name="CoinVisuals" type="Sprite2D" parent="Coin" unique_id=1186054625]
+texture_filter = 1
+texture = ExtResource("3_wrm1d")
+hframes = 2
+region_enabled = true
+region_rect = Rect2(198, 126, 36, 18)
+
+[node name="Enemy" type="Node2D" parent="." unique_id=311126824]
+position = Vector2(310, 91)
+
+[node name="EnemyVisuals" type="Sprite2D" parent="Enemy" unique_id=1005573804]
+texture_filter = 1
+texture = ExtResource("4_3dryh")
+offset = Vector2(0, -11)
+hframes = 3
+frame = 2
+region_enabled = true
+region_rect = Rect2(72, 50, 72, 22)
